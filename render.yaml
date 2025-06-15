@@ -1,12 +1,12 @@
 services:
   - type: web
     name: qa-study-app
-    env: docker
+    env: python
     plan: free
     region: oregon
-    dockerfilePath: ./Dockerfile
-    buildCommand: "" # 🔑 Dockerfile 사용 시 buildCommand 비워둬도 됨
-    startCommand: "" # 🔑 gunicorn 명령은 Dockerfile에 있음
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn app:app --chdir backend
+    pythonVersion: 3.10 # ✅ 명시 추가 (또는 3.9)
     envVars:
       - key: PORT
         value: 5000
