@@ -1,6 +1,12 @@
+pip>=23.1
+setuptools>=65.0
+wheel>=0.38.4
+
 flask==2.3.3
 flask-cors
-transformers==4.39.3
-tokenizers==0.19.1       # ✅ 빌드 실패 없는 안정된 binary wheel 있음
-torch==2.2.2              # ✅ torch 2.7.1은 아직 공식 wheel이 없음 → 2.2.2로 추천
 gunicorn
+
+transformers==4.39.3
+tokenizers==0.13.3   # ✅ 컴파일 안 해도 되는 안정 버전
+torch==2.2.2         # ⚠️ torch도 CUDA 없이 돌아가는 CPU 버전 사용
+huggingface-hub
