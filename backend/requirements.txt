@@ -7,6 +7,6 @@ flask-cors
 gunicorn
 
 transformers==4.39.3
-tokenizers==0.13.3   # ✅ 컴파일 안 해도 되는 안정 버전
-torch==2.2.2         # ⚠️ torch도 CUDA 없이 돌아가는 CPU 버전 사용
+tokenizers==0.13.3
+torch==2.7.1      # ✅ 이 버전은 Python 3.13에서 호환되는 최신 버전
 huggingface-hub

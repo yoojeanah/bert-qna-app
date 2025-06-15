@@ -5,6 +5,8 @@ services:
     plan: free
     region: oregon
     dockerfilePath: ./Dockerfile
+    buildCommand: "" # 🔑 Dockerfile 사용 시 buildCommand 비워둬도 됨
+    startCommand: "" # 🔑 gunicorn 명령은 Dockerfile에 있음
     envVars:
       - key: PORT
         value: 5000
