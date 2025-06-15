@@ -4,9 +4,9 @@ services:
     env: python
     plan: free
     region: oregon
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: gunicorn app:app --chdir backend
-    pythonVersion: 3.10 # ✅ 명시 추가 (또는 3.9)
+    buildCommand: pip install --upgrade pip && pip install -r backend/requirements.txt
+    startCommand: gunicorn app:app --chdir backend --bind 0.0.0.0:$PORT
+    pythonVersion: 3.10
     envVars:
       - key: PORT
         value: 5000
