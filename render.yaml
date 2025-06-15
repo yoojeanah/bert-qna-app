@@ -1,11 +1,10 @@
 services:
   - type: web
-    name: qa-study-backend
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python app.py"
+    name: qa-study-app
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: PORT
         value: 5000
-    plan: free
-    rootDir: backend

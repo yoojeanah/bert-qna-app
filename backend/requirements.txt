@@ -1,6 +1,6 @@
 flask==2.3.3
-tokenizers==0.13.3
-transformers==4.30.0
-torch==2.7.1          # 여기를 2.7.1로 변경!
-gunicorn
 flask-cors
+transformers==4.39.3
+tokenizers==0.19.1       # ✅ 빌드 실패 없는 안정된 binary wheel 있음
+torch==2.2.2              # ✅ torch 2.7.1은 아직 공식 wheel이 없음 → 2.2.2로 추천
+gunicorn
