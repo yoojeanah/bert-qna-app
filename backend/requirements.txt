@@ -7,6 +7,5 @@ flask-cors
 gunicorn
 
 transformers==4.39.3
-tokenizers==0.14.1   # ✅ 이 버전으로 바꿔야 함
 torch==2.7.1
 huggingface-hub
