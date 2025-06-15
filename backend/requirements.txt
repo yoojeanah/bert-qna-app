@@ -1,5 +1,6 @@
 flask==2.3.3
-transformers==4.30.0
-torch==2.5.0
+transformers==4.28.1   # 버전을 살짝 낮춰봅니다.
+torch==2.0.1           # PyPI에 있다고 나온 최신 버전 말고, 좀 더 검증된 버전으로 낮춰봅니다.
 gunicorn
 flask-cors
+# tokenizers는 transformers의 의존성으로 설치되므로 따로 명시하지 않아도 됩니다.
